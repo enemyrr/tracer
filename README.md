@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tracer
+
+Tracer is a Cursor IDE proxy designed to capture your API requests, show your current balance, and leverage anthropiccache for minimizing spend. It leverages custom API endpoint settings in Cursor to mimic the EXACT OpenAI endpoints and routes all requests via the proxy.
 
 ## Getting Started
 
@@ -16,7 +18,13 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can configure your Cursor IDE to use the custom API endpoint setting, ensuring that Tracer mimics OpenAI's API behavior exactly. As you edit the files, the proxy auto-updates with your changes.
+
+## OpenAI Endpoint Simulation
+
+Tracer intercepts requests intended for OpenAI, processes them through its proxy, and returns results seamlessly. This setup helps optimize your spending by leveraging anthropiccache effectively.
+
+For more details, consult the source code and inline documentation.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
